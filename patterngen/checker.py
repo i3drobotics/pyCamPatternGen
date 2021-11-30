@@ -148,4 +148,5 @@ if __name__ == '__main__':
     # checkerboard.save_page(
     #     'checkerboard_a4.png', paper_size=PaperSize.A4, square_size_mm=36)
     # plt.imshow(checkerboard.data, cmap='gray')
+    # plt.axis('off')
     # plt.show()

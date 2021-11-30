@@ -85,4 +85,5 @@ if __name__ == '__main__':
     noise.save_raw('noise_px_bw.png')
     # noise.save_mm('checkerboard_mm.png', square_size_mm=36, ppi=300)
     # plt.imshow(noise.data, cmap='gray')
+    # plt.axis('off')
     # plt.show()
