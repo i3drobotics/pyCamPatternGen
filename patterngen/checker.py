@@ -1,4 +1,5 @@
 import numpy as np
+import cv2
 import matplotlib.pyplot as plt
 import matplotlib.image as mpimg
 from patterngen.util import PaperSize
@@ -68,7 +69,6 @@ class Checkerboard:
         if square_size_px == 1:
             return data
 
-        # scale image by pixel square size
         data = data.repeat(
             square_size_px, axis=0).repeat(square_size_px, axis=1)
         return data
@@ -86,6 +86,7 @@ class Checkerboard:
             Default is 1. MUST be bigger than 0.
         """
         data = self._scale_squares(self.data, square_size_px)
+        # cv2.imwrite(filepath, data)
         mpimg.imsave(filepath, data, cmap=plt.cm.gray)
 
     def save_mm(self, filepath: str,
